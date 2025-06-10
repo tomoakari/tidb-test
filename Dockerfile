@@ -5,7 +5,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 ENV NODE_ENV=production
-RUN npm run sync && npm run build
+RUN npm run prepare && npm run build
 
 # Production stage
 FROM node:20-slim
