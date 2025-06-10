@@ -6,10 +6,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter(),
-		prerender: {
-			enabled: false
-		}
+		adapter: adapter()
 	}
 };
 

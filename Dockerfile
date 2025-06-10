@@ -5,12 +5,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 ENV NODE_ENV=production
-ENV TIDB_HOST=your-tidb-host
-ENV TIDB_PORT=4000
-ENV TIDB_USER=your-username
-ENV TIDB_PASSWORD=your-password
-ENV TIDB_DATABASE=your-database
-RUN npm run build
+RUN npm run sync && npm run build
 
 # Production stage
 FROM node:20-slim
